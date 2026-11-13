@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Noel Fragrances: perfumes que aquecem o inverno. Confira a coleção de Natal e as promoções do dia.">
+    <title>Noel Fragrances</title>
+    <!-- Links do css e de fontes do Google. -->
+    <link rel="stylesheet" href="style/style.css" href="style/style-responsivo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">  
+</head>
+
+<body>
+    <header class="navbar">
+        <div class="logo-area">
+            <a class="logo" href="index.html" aria-label="Noel Fragrances - página inicial">
+                <img class="logo-img" src="imgs/Logo-loja.png" alt="Logo Noel Fragrances">
+                <span>
+                    <h1 class="h1-font">Noel Fragrances</h1>
+                </span>
+            </a>
+            <audio id="musicaFundo" loop>
+                <source src="audio/FORTNITE FESTIVE MUSIC 1 HOUR (CHRISTMAS MUSIC) - AMP Fortnite.mp3" type="audio/mpeg">
+            </audio>
+            <button class="btn-musica" id="btnMusica" title="Tocar música" aria-label="Tocar música">
+                <img src="https://img.criativodahora.com.br/homologacao/thumbs/2025/10/05/1f5348de-3181-4d93-9ee0-7682c5a2d383.jpg" alt="">
+            </button>
+        </div>
+
+        <!-- area de busca-->
+        <form class="busca" action="produtos.html" method="get" role="search">
+            <input type="search" name="busca" placeholder="Buscar perfume..." aria-label="Buscar perfume"
+                autocomplete="off">
+            <button type="submit" aria-label="Pesquisar">&#128269;</button>
+        </form>
+
+        <!-- botão hambúrguer (aparece só em tela pequena) -->
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav-links" id="navLinks" aria-label="Menu principal">
+            <a href="index.html">Home</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="sobrenos.html">Sobre nós</a>
+            <a href="promocoes.html">Promoções</a>
+            <a href="contato.html" class="cta-contato">Contato</a>
+        </nav>
+    </header>
+
+    <!-- NEVE CAINDO (fica por cima de toda a página) -->
+    <canvas id="neve" aria-hidden="true"></canvas>
+
+    <!-- BANNER PARALLAX -->
+    <section class="banner-principal" id="banner">
+        <!-- camada 1: vila natalina (mais distante) -->
+        <div class="layer vila" data-speed="0.22" data-depth="14"
+            style="background-image: url('imgs/Banner/Hero-img.png');"></div>
+
+        <!-- camada 2: estrelas no céu -->
+        <div class="layer estrelas" id="estrelas" data-speed="0.16" data-depth="10"></div>
+
+        <!-- camada 3: brilho quente -->
+        <div class="layer brilho" data-speed="0.30" data-depth="18"></div>
+
+        <!-- camada 4: texto do banner -->
+        <div class="layer hero-texto" data-speed="0.38" data-depth="22">
+            <p class="hero-sub">Coleção de Natal Noel Fragrances.</p>
+            <h2 class="hero-titulo">Perfumes que aquecem <br> o inverno.</h2>
+            <div class="btn-container">
+                <a class="hero-btn" href="#promocoes">Ver promoções</a>
+                <a class="sobrenos-btn" href="sobrenos.html">Conheça a Loja!</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROMOÇÕES -->
+    <section class="promo-destaque" id="promocoes">
+
+        <div class="promo-text">
+            <h2 class="promo-titulo">Promoções do dia</h2>
+        </div>
+
+        <div class="slider">
+            <button class="seta" id="anterior" aria-label="Anterior">&#10094;</button>
+
+            <div class="janela">
+                <div class="promo-container" id="trilho">
+                    <div class="fundo-promo">
+                        <img class="img-promo" src="imgs/Produtos/rabanne-1-million-x-pac-man-collector-edition.avif"
+                            alt="1 Million x Pac-Man Collector Edition" loading="lazy">
+                        <h3 title="1 Million x Pac-Man Collector Edition">1 Million x Pac-Man</h3>
+                        <p class="desc-promo">Oriental marcante em edição de colecionador.</p>
+                        <p class="preco-promo">R$ 699,99</p>
+                        <a href="produto.html?id=10" class="btn-produto">Ver produto</a>
+                    </div>
+
+                    <div class="fundo-promo">
+                        <img class="img-promo" src="imgs/Produtos/valentino-donna-born-in-roma-green-stravaganza.avif"
+                            alt="Valentino Donna Born in Roma Green Stravaganza" loading="lazy">
+                        <h3 title="Born in Roma Green Stravaganza">Born in Roma Green Stravaganza</h3>
+                        <p class="desc-promo">Floral sofisticado e vibrante, da Valentino.</p>
+                        <p class="preco-promo">R$ 729,99</p>
+                        <a href="produto.html?id=33" class="btn-produto">Ver produto</a>
+                    </div>
+
+                    <div class="fundo-promo">
+                        <img class="img-promo" src="imgs/Produtos/jean-paul-gaultier-le-male-elixir.avif" alt="Le Male Elixir"
+                            loading="lazy">
+                        <h3 title="Le Male Elixir">Le Male Elixir</h3>
+                        <p class="desc-promo">Oriental quente e envolvente, perfeito para o inverno.</p>
+                        <p class="preco-promo">R$ 699,99</p>
+                        <a href="produto.html?id=19" class="btn-produto">Ver produto</a>
+                    </div>
+
+                    <div class="fundo-promo">
+                        <img class="img-promo" src="imgs/Produtos/jean-paul-gaultier-la-belle-rosea.avif" alt="La Belle Rosea"
+                            loading="lazy">
+                        <h3 title="La Belle Rosea">La Belle Rosea</h3>
+                        <p class="desc-promo">Floral delicado da Jean Paul Gaultier.</p>
+                        <p class="preco-promo">R$ 629,99</p>
+                        <a href="produto.html?id=15" class="btn-produto">Ver produto</a>
+                    </div>
+
+                    <div class="fundo-promo">
+                        <img class="img-promo" src="imgs/Produtos/xerjoff-la-capitale.avif" alt="Xerjoff La Capitale"
+                            loading="lazy">
+                        <h3 title="La Capitale">La Capitale</h3>
+                        <p class="desc-promo">Aromático de nicho, exclusivo da Xerjoff.</p>
+                        <p class="preco-promo">R$ 2.199,99</p>
+                        <a href="produto.html?id=47" class="btn-produto">Ver produto</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <button class="seta" id="proximo" aria-label="Próximo">&#10095;</button>
+        </div>
+
+    </section>
+    <!-- RODAPÉ -->
+    <footer class="footer-loja">
+    <h2>Noel Fragrances</h2>
+
+    <div class="footer-informacoes">
+        <p><strong>Endereço:</strong> Rua das Flores, 125 - Centro</p>
+        <p><strong>Telefone:</strong> (19) 99820 3548</p>
+        <p><strong>E-mail:</strong> contato@noelfragrances.com.br</p>
+        <p><strong>Horário:</strong> Segunda a sábado, das 9h às 18h</p>
+        <p><strong>Instagram:</strong> @noelfragrances</p>
+    </div>
+
+    <p class="direitos">
+        © 2026 Noel Fragrances - Todos os direitos reservados.
+    </p>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

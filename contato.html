@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato | Noel Fragrances</title>
+    <!-- Links do css e de fontes do Google. -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Mountains+of+Christmas:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="index.html" aria-label="Noel Fragrances - página inicial">
+                <img class="logo-img" src="imgs/Logo-loja.png" alt="Logo Noel Fragrances">
+                <h1 class="h1-font">Noel Fragrances</h1>
+            </a>
+            <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+                <span></span><span></span><span></span>
+            </button>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="produtos.html">Produtos</a>
+                <a href="sobrenos.html">Sobre nós</a>
+                <a href="promocoes.html">Promoções</a>
+                <a href="contato.html">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="contato-layout">
+        <form class="form-contato" id="formContato">
+            <h2>Nos envie um contato!</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" placeholder="Digite seu nome..." required> 
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu e-mail..." required>
+
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" placeholder="Digite o assunto..." required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+
+            <button id="enviarBtn" type="submit">Enviar mensagem</button>
+        </form>
+
+        <div class="arvore-container">
+            <img src="imgs/Gifs/Gif-arvore-natal.gif" alt="Gif árvore de natal animada">
+        </div>
+    </main>
+
+<footer class="footer-loja">
+    <h2>Noel Fragrances</h2>
+
+    <div class="footer-informacoes">
+        <p><strong>Endereço:</strong> Rua das Flores, 125 - Centro</p>
+        <p><strong>Telefone:</strong> (19) 99820 3548</p>
+        <p><strong>E-mail:</strong> contato@noelfragrances.com.br</p>
+        <p><strong>Horário:</strong> Segunda a sábado, das 9h às 18h</p>
+        <p><strong>Instagram:</strong> @noelfragrances</p>
+    </div>
+
+    <p class="direitos">
+        © 2026 Noel Fragrances - Todos os direitos reservados.
+    </p>
+</footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
